@@ -7,6 +7,7 @@
     <title>영화 검색 사이트</title>
 
     <style>
+      /* 메인 헤더 */
       .serch {
         display: flex;
         justify-content: center;
@@ -16,9 +17,34 @@
         font-size: 50px;
       }
 
-      /* .input {
-        width: 50px;
-      } */
+      /* 영화카드 */
+
+      .box {
+        width: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 100px auto;
+        transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+        cursor: pointer;
+        border: 1px solid white;
+        color: white;
+      }
+
+      .box:hover {
+        box-shadow: 0 14px 28px rgba(252, 249, 249, 0.25),
+          0 10px 10px rgba(248, 236, 6, 0.25);
+        transform: translateY(-10px);
+      }
+
+      .box .img {
+        display: block;
+        width: 100%;
+        padding: 0;
+      }
+
+      .box .movie_title {
+        font-size: 30px;
+      }
     </style>
   </head>
   <body style="background-color: rgb(10, 9, 25)">
@@ -36,6 +62,16 @@
         style="width: 300px; height: 30px; font-size: 20px; margin-right: 5px"
       />
       <button>검색</button>
+    </div>
+
+    <!--영화 카드-->
+    <div class="box">
+      <img class="img" src="./배경.jpg" alt="" />
+      <h2 class="movie_title">이웃집 토토로</h2>
+      <div class="movie_content">
+        <span class="score">5점</span>
+      </div>
+      <p class="overview">이 영화의 내용을 요약하자면,,</p>
     </div>
   </body>
 </html>
