@@ -1,15 +1,24 @@
 /* 메인 헤더 */
+#header {
+  color: yellow;
+  font-size: 60px;
+}
+
+/* 검색창 */
 .serch {
   display: flex;
   justify-content: center;
 }
-#header {
-  color: yellow;
-  font-size: 50px;
+#btn {
+  cursor: pointer;
 }
 
 /* 영화카드 */
-
+.card-box {
+  display: grid;
+  /* fr : 숫자 비율대로 트랙의 크기를 나눈다. 즉 균일하게 1:1:1:1 비율인 4개의 column을 만들겠다는 의미 */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 .card {
   width: 300px;
   border-radius: 8px;
