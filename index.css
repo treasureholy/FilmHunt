@@ -1,0 +1,38 @@
+/* 메인 헤더 */
+.serch {
+  display: flex;
+  justify-content: center;
+}
+#header {
+  color: yellow;
+  font-size: 50px;
+}
+
+/* 영화카드 */
+
+.card {
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 100px auto;
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  cursor: pointer;
+  border: 1px solid white;
+  color: white;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(252, 249, 249, 0.25),
+    0 10px 10px rgba(248, 236, 6, 0.25);
+  transform: translateY(-10px);
+}
+
+.card .img {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+
+.card .movie_title {
+  font-size: 30px;
+}
