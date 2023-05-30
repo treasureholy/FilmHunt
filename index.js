@@ -85,3 +85,7 @@ document.getElementById("btn").addEventListener("click", () => {
   //forEach 메서드는 각 요소를 순회하면서 콜백 함수를 실행하는데, 해당 순회를 중단하고자 할 때 사용함.
   //하지만 여기서는 각 요소에 대해 hide 클래스를 추가하거나 제거하기만 하면 되므로 return 문은 필요없음.
 });
+// 헤더를 클릭하면 페이지 새로고침
+document.getElementById("header").addEventListener("click", () => {
+  location.reload();
+});

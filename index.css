@@ -2,6 +2,7 @@
 #header {
   color: yellow;
   font-size: 60px;
+  cursor: pointer;
 }
 
 /* 검색창 */
