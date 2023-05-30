@@ -15,8 +15,9 @@
     </header>
 
     <!--영화 검색창-->
-    <div class="serch" onsubmit="handleSearch(event)">
+    <div class="serch">
       <input
+        id="input-name"
         type="text"
         size="30"
         placeholder="🔍영화 제목을 검색해주세요"
@@ -28,7 +29,7 @@
     </div>
 
     <!-- 영화 카드 -->
-    <div class="card-box">
+    <div class="card-box" id="list">
       <div class="card">
         <img class="img" src="./배경.jpg" alt="" />
         <h2 class="movie_title">이웃집 토토로</h2>
@@ -42,3 +43,4 @@
     <script src="./index.js"></script>
   </body>
 </html>
+<!-- 언젠간 쓰겠지 onsubmit="onclickSearch(event)" -->

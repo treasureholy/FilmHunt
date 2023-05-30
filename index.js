@@ -9,7 +9,7 @@ const options = {
   },
 };
 //Fetch API는 리소스를 가져오기 위한 인터페이스를 제공.
-fetch("https://api.themoviedb.org/3/movie/popular?language=ko&page=1", options) //language 한글로 번역 (language=ko)
+fetch("https://api.themoviedb.org/3/movie/popular?language=ko&page=1", options) //language 한글로 번역 (language=ko) / language=en-US(영어)
   //response는 Fetch API의 요청에 대한 응답
   .then((response) => response.json())
   //json메서드는 response를 가져와 response가 완료될 때까지 읽는다(본문 텍스트로 구문 분석한 결과로 해결되는 약속을 반환함)
@@ -44,3 +44,11 @@ fetch("https://api.themoviedb.org/3/movie/popular?language=ko&page=1", options) 
 cardAlert = function (moiveId) {
   alert(`영화 id: ${moiveId}`);
 };
+
+//검색 받아오기
+document.getElementById("btn").addEventListener("click", () => {
+  //검색 기능
+  const inputText = document.getElementById("input-name"); // id 속성을 기준으로 요소를 선택
+  const value = inputText.value;
+  const card = document.querySelectorAll(".card"); //모든 요소를 선택
+});
