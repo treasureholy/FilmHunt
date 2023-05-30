@@ -14,6 +14,11 @@
 }
 
 /* 영화카드 */
+
+.hide {
+  display: none;
+}
+
 .card-box {
   display: grid;
   /* fr : 숫자 비율대로 트랙의 크기를 나눈다. 즉 균일하게 1:1:1:1 비율인 4개의 column을 만들겠다는 의미 */
