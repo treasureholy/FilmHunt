@@ -26,10 +26,8 @@ fetch(
       let template = `<div class="card" onclick="cardAlert(${movie.id})"> 
                           <img class="img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="" />
                           <h2 class="movie_title">${movie.title}</h2>
-                          <div class="movie_content">
-                            <span class="score">별점 : ${movie.vote_average}</span>
-                          </div>
-                          <p class="overview">${movie.overview}</p>
+                          <div class="movie_score">별점 : ${movie.vote_average}</div>
+                          <div class="overview">${movie.overview}</div>
                        </div>`;
 
       document
@@ -86,8 +84,9 @@ document.getElementById("btn").addEventListener("click", () => {
   //하지만 여기서는 각 요소에 대해 hide 클래스를 추가하거나 제거하기만 하면 되므로 return 문은 필요없음.
 });
 
+//DOMContentLoaded 이벤트 리스너를 사용하여 페이지가 완전히 로드되었을 때 실행
 document.addEventListener("DOMContentLoaded", () => {
-  // 헤더를 클릭하면 페이지 새로고침 후 검색 입력란에 포커스 설정
+  //헤더를 클릭했을 때 페이지를 새로고침하는 location.reload() 함수를 호출
   document.getElementById("header").addEventListener("click", () => {
     location.reload();
   });
