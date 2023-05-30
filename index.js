@@ -16,10 +16,11 @@ fetch("https://api.themoviedb.org/3/movie/popular?language=ko&page=1", options) 
   .then((response) => {
     //기존에 만든 카드 삭제
     document.querySelector(".card").remove();
-    // console.log(response.results); (html과 연결 잘 되었는지 확인)
+    //console.log(response.results); (html과 연결 잘 되었는지 확인)
     response.results.forEach((movie) => {
       // [객체 key - value pair로 .사용해서 값에 접근]
-      let template = `<div class="card">
+      //onclick 할 때 마다 cardAlert() 호출
+      let template = `<div class="card" onclick="cardAlert(${movie.id})"> 
                           <img class="img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="" />
                           <h2 class="movie_title">${movie.title}</h2>
                           <div class="movie_content">
@@ -27,6 +28,7 @@ fetch("https://api.themoviedb.org/3/movie/popular?language=ko&page=1", options) 
                           </div>
                           <p class="overview">${movie.overview}</p>
                        </div>`;
+
       document
         // querySelector : (card-box)는 document에서 매치되는 엘리먼트를 갖고 옴
         .querySelector(".card-box")
@@ -36,3 +38,9 @@ fetch("https://api.themoviedb.org/3/movie/popular?language=ko&page=1", options) 
     });
   })
   .catch((err) => console.error(err));
+
+//div class="card"를 onclick시 카드마다 개별 알럿창 띄우는 함수 정의
+//변수명 = function (매개변수){}
+cardAlert = function (moiveId) {
+  alert(`영화 id: ${moiveId}`);
+};
