@@ -49,9 +49,9 @@ cardAlert = function (moiveId) {
 //검색기능
 document.getElementById("btn").addEventListener("click", () => {
   //input값 받아오기
-  const inputText = document.getElementById("input-name"); //id 속성을 기준으로 요소를 선택
-  const value = inputText.value;
-  const card = document.querySelectorAll(".card"); //card의 모든 요소를 선택
+  const inputText = document.getElementById("input-name"); //id(input-name) 속성을 통해 검색 입력 요소를 가져옴
+  const value = inputText.value; //검색 입력 요소 값을 가져옴
+  const card = document.querySelectorAll(".card"); //클래스가 card인 모든 요소를 선택
 
   //검색 (movie title) 기능
   if (value) {
