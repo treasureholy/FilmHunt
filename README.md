@@ -12,7 +12,7 @@
 * 메인페이지 기능 : 검색창에 영화 제목을 검색하면 리스트에 있는 영화를 찾을 수 있습니다.
 
 ## 2.프로젝트 시연 영상
-![GIFMaker_me](https://github.com/treasureholy/FilmHunt/assets/130212469/5eb471a9-ba98-4671-acfc-4386e4e5ea35)
+![미디어1](https://github.com/treasureholy/FilmHunt/assets/130212469/c4e88811-498c-4c11-85c7-1c1f4e53e727)
 ## 3.기술 스택
 ![사용된 기술](https://github.com/treasureholy/FilmHunt/assets/130212469/57dac1ac-af63-4fd1-92f1-cbb38c26b737)
 
