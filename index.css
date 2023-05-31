@@ -1,5 +1,9 @@
+body {
+  background-color: rgb(10, 9, 25);
+}
+
 /* [메인 헤더] */
-#header {
+.header {
   color: yellow;
   font-size: 60px;
   cursor: pointer;
@@ -10,8 +14,19 @@
   display: flex;
   justify-content: center;
 }
-#btn {
+.serch input {
+  width: 450px;
+  height: 50px;
+  font-size: 23px;
+  margin-right: 5px;
+  padding-left: 15px;
+  border-radius: 10px;
+}
+.mybtn {
   cursor: pointer;
+  width: 55px;
+  border: 1px solid rgb(245, 250, 245);
+  border-radius: 10px;
 }
 
 /* [영화카드] */
@@ -21,8 +36,8 @@
 
 .card-box {
   display: grid;
-  /* fr : 숫자 비율대로 트랙의 크기를 나눈다 */
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
 }
 .card {
   width: 300px;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,10 +8,10 @@
     <link href="./index.css" rel="stylesheet" />
   </head>
 
-  <body style="background-color: rgb(10, 9, 25)">
+  <body>
     <!--Header-->
     <header>
-      <h1 id="header">🎬FilmHunt</h1>
+      <h1 class="header">🎬FilmHunt</h1>
     </header>
 
     <!--영화 검색창-->
@@ -20,22 +20,14 @@
         id="input-name"
         type="text"
         size="30"
-        placeholder="🔍영화 제목을 검색해주세요"
-        style="width: 450px; height: 50px; font-size: 23px; margin-right: 5px"
+        placeholder="영화 제목을 검색해주세요"
       />
-      <button id="btn" type="submit" style="width: 60px; font-size: 20px">
-        검색
-      </button>
+      <img class="mybtn" src="./검색버튼.png" alt="검색" id="btn" />
     </div>
 
     <!-- 영화 카드 -->
     <div class="card-box">
-      <div class="card">
-        <img class="img" src="./배경.jpg" alt="" />
-        <h2 class="movie_title">이웃집 토토로</h2>
-        <div class="movie_score">5점</div>
-        <div class="overview">이 영화의 내용을 요약하자면,,</div>
-      </div>
+      <div class="card"></div>
     </div>
 
     <!-- 페이지 상단 이동 -->

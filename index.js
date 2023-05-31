@@ -19,7 +19,7 @@ fetch(
     document.querySelector(".card").remove();
     response.results.forEach((movie) => {
       // 객체 key - value pair로 .사용해서 값에 접근
-      let template = `<div class="card" onclick="cardAlert(${movie.id})"> 
+      const template = `<div class="card" onclick="cardAlert(${movie.id})"> 
                           <img class="img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="" />
                           <h2 class="movie_title">${movie.title}</h2>
                           <div class="movie_score">Rating : ${movie.vote_average}</div>
@@ -48,16 +48,23 @@ document.getElementById("btn").addEventListener("click", () => {
 
   //검색 (movie title) 기능
   if (value) {
-    //카드의 객체를 배열로 만들어서 filter메서드 사용해서 데이터를 하나씩 가져옴
-    const movieList = [...card].filter((i) => {
-      const movieTitle = i
+    const filteredCards = [...card].filter((i) => {
+      const cardTitle = i
         .querySelector(".movie_title")
-        .textContent.toLowerCase(); //movie_title의 text를 가져옴 + 소문자로 변환'
-      //제목에 검색어가 포함되는 여부에 따라 해당 카드를 숨기거나 보이게 함
-      if (!movieTitle.includes(value)) {
-        i.classList.add("hide"); //
-      } else {
+        .textContent.toLowerCase();
+      return cardTitle.includes(value);
+    });
+
+    if (filteredCards.length === 0) {
+      // 검색어와 일치하는 영화가 없을 경우 처리
+      alert("일치하는 영화가 없습니다.");
+    }
+    //제목에 검색어가 포함되는 여부에 따라 해당 카드를 숨기거나 보이게 함
+    [...card].forEach((i) => {
+      if (filteredCards.includes(i)) {
         i.classList.remove("hide");
+      } else {
+        i.classList.add("hide");
       }
     });
   }
@@ -65,7 +72,7 @@ document.getElementById("btn").addEventListener("click", () => {
 
 // [페이지 새로고침]
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("header").addEventListener("click", () => {
+  document.querySelector("header").addEventListener("click", () => {
     location.reload();
   });
   //페이지 로드 후 검색 입력란에 포커스 설정
