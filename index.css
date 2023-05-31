@@ -1,11 +1,11 @@
-/* 메인 헤더 */
+/* [메인 헤더] */
 #header {
   color: yellow;
   font-size: 60px;
   cursor: pointer;
 }
 
-/* 검색창 */
+/* [검색창] */
 .serch {
   display: flex;
   justify-content: center;
@@ -14,14 +14,14 @@
   cursor: pointer;
 }
 
-/* 영화카드 */
+/* [영화카드] */
 .hide {
   display: none;
 }
 
 .card-box {
   display: grid;
-  /* fr : 숫자 비율대로 트랙의 크기를 나눈다. 즉 균일하게 1:1:1:1 비율인 4개의 column을 만들겠다는 의미 */
+  /* fr : 숫자 비율대로 트랙의 크기를 나눈다 */
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .card {
@@ -68,7 +68,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* 페이지 상단으로 이동 */
+
+/* [페이지 상단으로 이동] */
 .moveTopBtn {
   position: fixed;
   bottom: 1rem;
